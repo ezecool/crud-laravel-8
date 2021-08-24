@@ -1,11 +1,12 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('css')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
-@endsection
+@section('title', 'CRUD con Laravel 8')
 
-@section('contenido')
+@section('content_header')
+    <h1>Administraci&oacute;n de articulos</h1>
+@stop
 
+@section('content')
     <div class="mb-4 mt-4">
         <a href="articulos/create" class="btn btn-primary">Nuevo articulo</a>
     </div>
@@ -42,23 +43,27 @@
                 @endforeach
             </tbody>
         </table>
-
-        @section('js')
-            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-            <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-            <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
-
-            <script>
-                $(document).ready(function() {
-                    $('#articulos').DataTable({
-                        "lengthMenu": [
-                            [5, 10, 15, -1],
-                            [5, 10, 15, "all"]
-                        ]
-                    });
-                })
-            </script>
-        @endsection
-
     </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
+@stop
+
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#articulos').DataTable({
+                "lengthMenu": [
+                    [5, 10, 15, -1],
+                    [5, 10, 15, "all"]
+                ]
+            });
+        })
+    </script>
+@stop

@@ -1,7 +1,12 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('contenido')
-    <h2>Nuevo articulo</h2>
+@section('title', 'CRUD con Laravel 8')
+
+@section('content_header')
+    <h1>Nuevo articulo</h1>
+@stop
+
+@section('content')
     <div>
         <form action="/articulos" method="post">
             @csrf
@@ -25,4 +30,11 @@
             <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
         </form>
     </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+@stop
