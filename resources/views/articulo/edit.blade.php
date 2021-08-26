@@ -3,7 +3,7 @@
 @section('title', 'CRUD con Laravel 8')
 
 @section('content_header')
-    <h1>Editar articulo</h1>
+    <h1>Perfil</h1>
 @stop
 
 @section('content')

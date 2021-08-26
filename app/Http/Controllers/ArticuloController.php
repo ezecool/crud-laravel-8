@@ -7,6 +7,13 @@ use App\Models\Articulo;
 
 class ArticuloController extends Controller
 {
+
+    public function __construct()
+    {
+        // Verificar, en cada metodo de la clase,  que el usuario este logueado
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
