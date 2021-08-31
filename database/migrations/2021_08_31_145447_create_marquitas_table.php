@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLocalidadTable extends Migration
+class CreateMarquitasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateLocalidadTable extends Migration
      */
     public function up()
     {
-        Schema::create('localidades', function (Blueprint $table) {
+        Schema::create('marquitas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 100);
-            $table->tinyInteger('id_dpto');
+            $table->string('nombre', 50);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateLocalidadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('localidades');
+        Schema::dropIfExists('marquitas');
     }
 }

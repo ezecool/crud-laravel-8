@@ -17,6 +17,7 @@ class CreateArticulosTable extends Migration
             $table->id();
             $table->string('codigo', 10);
             $table->string('descripcion', 50);
+            $table->tinyInteger('marca_id');
             $table->integer('cantidad');
             $table->decimal('precio', 8, 2);
             $table->timestamps();
